@@ -158,15 +158,7 @@ function page2mob(){
                     duration: 0.5,
                 });
     
-                // Fade out the elements of other slides
-                // slides.forEach((slide, i) => {
-                //     if (i !== index) {
-                //         gsap.to(slide.querySelectorAll("h2, p, img"), {
-                //             opacity: 0,
-                //             duration: 0.5,
-                //         });
-                //     }
-                // });
+                
             }
         });
     }
