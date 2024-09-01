@@ -501,9 +501,35 @@ function initializeAnimations() {
         menumob();
         page2mob();
     }
+    lazyLoadWhySection();
     
 }
 
+function lazyLoadWhySection() {
+    const whySection = document.querySelector('#whyintro'); // Replace with your actual section selector
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    why();
+                    observer.unobserve(whySection); // Stop observing once `why()` has been triggered
+                }
+            });
+        });
+
+        observer.observe(whySection);
+    } else {
+        // Fallback if Intersection Observer is not supported
+        window.addEventListener('scroll', function onScroll() {
+            const rect = whySection.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+                why();
+                window.removeEventListener('scroll', onScroll); // Stop listening after `why()` is triggered
+            }
+        });
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function() {
    initializeAnimations();
