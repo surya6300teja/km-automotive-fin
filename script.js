@@ -645,7 +645,7 @@ function intro_animation(){
         ease: "slow(0.7, 0.7, false)"
     });
 
-    // window.addEventListener("load", function() {
+    window.addEventListener("load", function() {
         document.getElementById("page1").classList.remove("opacity-0");
         tl.from(".logo h1",{
             y:350,
@@ -714,7 +714,7 @@ function intro_animation(){
             tl.to(".logo h1", { x: logomove, duration: 0.5 },"line1");
             tl.to(".menu", { right: move, duration: 0.5 },"line1");
         }
-    // });
+    });
 }
 
 
