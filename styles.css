@@ -458,6 +458,9 @@ img{
     flex-direction: column;
     justify-content: space-between;
 }
+.mc .content p{
+    font-size: 0.9rem;
+}
 
 .content h1{
     font-family: "Poppins", sans-serif;
@@ -886,6 +889,7 @@ form button:hover{
     height: 100%;
     
 }
+
 
 @media only screen and (max-width: 600px){
     img, video {
@@ -1608,19 +1612,24 @@ form button:hover{
         font-size: 2.5vw;
         color:#e32525
     }
-    
-    
+    #footerspacer{
+        height: 30vh;
+    }
     #footer{
+        
         font-family: "Poppins", sans-serif;
         color: white;
         display: flex;
-        align-items: center;
+        align-items:center;
         justify-content: center;
         text-align: center;
-        height: 30vh;
+        height: 10vh;
         background-color: rgb(60, 59, 59);
     }
     #footer p{
+        /* margin-top: 30px;
+        margin-bottom: 10px; */
+        /* position: absolute; */
         font-size: 2vw;
         font-family: "Poppins", sans-serif;
     }
@@ -1666,5 +1675,9 @@ form button:hover{
         margin-left: 1px;
     }
     
+    .mc .content p{
+        margin-top: 5px;
+        font-size: 2vw;
+    }
     
 }
