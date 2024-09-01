@@ -889,13 +889,20 @@ form button:hover{
     height: 100%;
     
 }
-.introbtns{
+.introbtns {
     display: flex;
-    flex-direction: row;
-    gap: 5px;
+    gap: 10px; /* Adjust the space between the buttons */
+    flex-wrap: nowrap;
+    min-width: 0;
 }
-
-
+.introbtns button {
+    display: inline-block;
+    white-space: nowrap; 
+}
+.introbtns a {
+ /* Inherit the button text color */
+    display: block;
+}
 @media only screen and (max-width: 600px){
     img, video {
         max-width: 100%;
