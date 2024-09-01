@@ -312,6 +312,37 @@ function services() {
         }, "line3");
     }
 }
+function lazyLoadVideo() {
+    const video = document.querySelector('.background-video');
+    const videoContainer = document.querySelector('.canvas1'); // The container for the video
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.src = video.dataset.src; // Set the actual video source
+                    video.play(); // Start the video once it's in view
+                    observer.unobserve(videoContainer); // Stop observing once the video is loaded
+                }
+            });
+        });
+
+        observer.observe(videoContainer);
+    } else {
+        // Fallback if Intersection Observer is not supported
+        window.addEventListener('scroll', function onScroll() {
+            const rect = videoContainer.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+                video.src = video.dataset.src;
+                video.play();
+                window.removeEventListener('scroll', onScroll); // Stop listening after the video is loaded
+            }
+        });
+    }
+}
+
+// Initialize lazy loading when the document is ready
+document.addEventListener('DOMContentLoaded', lazyLoadVideo);
 
 
 function whyintro() {
