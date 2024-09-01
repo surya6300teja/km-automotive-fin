@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMAutomotive</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cedarville+Cursive&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cedarville+Cursive&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "9iGi2YoeHyWfqUJDV",
+      });
+   })();
+</script>
+   
+
+</head>
+<body class="preload overflow-x-hidden"  style="visibility: hidden;" >
+    <div id="curser"></div>
+    
+    <div id="rcbform">
+        <i class="ri-close-line"></i>
+        <h1>Request A Call Back</h1>
+        <form onsubmit="sendMail(event);" >
+            <div class="l1">
+                <input type="text" id="name" placeholder="First Name" name="firstName">
+
+                <input type="text" id="car" placeholder="Vehicle Details" name="vehicleDetails">
+            </div>
+            
+
+            <input type="tel" id="phone" placeholder="Mobile Phone" name="mobilePhone">
+
+            <button type="submit" >SUBMIT</button>
+        </form>
+        <div class="success">
+            <i class="ri-close-line"></i>
+            <h1>Thank you! Our team will contact you shortly!</h1>
+        </div>
+    </div>
+    <div id="page1" class="opacity-0">
+        
+        <nav>
+            <div class="logo">
+                <h1>KM Automotive</h1>
+            </div>
+            <i class="ri-settings-5-line"></i>
+            <div class="menu">
+                <ul>
+                    <li><a href="#page1">Home</a></li>
+                    <li><a href="#page2intro">Services</a></li>
+                    <li><a href="#whyintro">About</a></li>
+                    <li><a href="#testimonialsintro">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+
+        <div class="engine">
+            <h2>ENGINE IS ACTIVATING...</h2>
+            <div class="loading-ani">
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="quote">
+                <h2>Drive with Confidence, Powered by Expertise.</h2>
+            </div>
+            <div class="hero">
+                <div class="intro">
+                    <p>Welcome to <br>KM Automotive!</p>
+                    <h3>Reliable Complete car care solutions, Right Around the Corner.</h3>
+                    <button class="rcbtn" ><a href="">BOOK A SERVICE</a></button>
+                    <button class="map" >
+                        <a href="https://www.google.com/maps/place/KM+AUTOMOTIVE/@17.4569547,78.3844629,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb999f59f766e5:0xcd3fce4ee151802!8m2!3d17.4569547!4d78.3844629!16s%2Fg%2F11tnl096s_?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D">Get Directions</a>
+                    </button>                    
+                </div>
+                <div class="banner">
+                    <img src="./kaarz logo.png" alt="">
+                </div>
+            </div>    
+        </div>
+        
+    </div>
+    <div id="page2intro" class="page2in">
+        
+        <h2>From schedule maintenance to all technical Repairs, we’ve got you covered.</h2>
+        <h3>Our Services</h3>
+        
+    </div>
+    <div id="page2">
+        <div class="canvas1">
+            <video class="background-video" autoplay muted loop>
+                <source src="SnapSave.io-R35 GTR EDIT_ 4K.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="frame"></div>
+        <div class="about">
+            <div class="slide c1">
+                <h2>Schedule Maintenance</h2>
+                <img src="./erik-mclean-3uHlGFnzPDU-unsplash.jpg" alt="">
+                <p>Oil changes,Brake inspection,electrical inspection & more</p>
+            </div>
+            <div class="slide c2">
+                <h2>Technical Repair Services</h2>
+                <img src="./kat-sazonova-KlOw94HiuGc-unsplash copy.jpg" alt="">
+                <p>Expert diagnostics and repairs to get your car back on the road quickly and ensure it's roadworthy..</p>
+            </div>
+            <div class="slide c3">
+                <h2>Specialized Services</h2>
+                <img src="./vitali-adutskevich-B7hVEFTFUWs-unsplash.jpg" alt="">
+                <p>Advanced solutions for your car’s specific issues, from electrical systems to air conditioning</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="services">
+        <div class="title">
+            <h1><span style="color: red;">KM </span> Services</h1>
+        </div>
+        <div class="container">
+            <div class="ele left line1">
+                <div class="content">
+                    
+                    <div class="text">
+                        <h1>Schedule Maintenance </h1>
+                        <p class="mt-2">Maintain smooth engine performance with our essential oil, lube, and filter services.</p>
+                    </div>
+                    
+                </div>
+                <img src="./Car-Oil_Lube.svg" alt="">
+                
+            </div>
+            <div class="ele blue center line1">
+                <div class="content">
+                    <div class="text">
+                        <h1>Dent & Paint </h1>
+                        <p class="mt-3">Restore your car’s look with expert dent removal and perfect paint matching</p>
+                    </div>
+                    
+                </div>
+                <img src="./car-Dent_Paint.svg" alt="">
+            </div>
+            <div class="ele right line1">
+                <div class="content">
+                    <div class="text">
+                        <h1>Diagnostics</h1>
+                        <p class="mt-3" >Our tools quickly identify issues, ensuring accurate repairs before problems grow.</p>
+                    </div>
+                    
+                </div>
+                <img src="./car-diagnostic.svg" alt="">
+                
+            </div>
+            <div class="ele blue left line2">
+                <div class="content">
+                    <div class="text">
+                        <h1>Electrical and AC Repair Services</h1>
+                        <p style="font-size: 1rem;"> Our certified technicians specialize in diagnosing and fixing electrical issues and restoring your AC system to optimal performance.</p>
+                    </div>
+                    
+                </div>
+                <img src="./Car-Brake.svg" alt="">
+            </div>
+            <div class="ele center line2">
+                <div class="content">
+                    <div class="text">
+                        <h1>Detailing</h1>
+                        <p class="mt-3" >Get a showroom finish with our complete interior and exterior vehicle detailing..</p>
+                    </div>
+                    
+                </div>
+                <img src="./Car_-_Detailing.svg" alt="">
+            </div>
+            <div class="ele blue right line2">
+                <div class="content">
+                    <div class="text">
+                        <h1>Free Pickup & Drop-Off Service</h1>
+                        <p class="mt-3" style="font-size: 1rem;" >Experience our free pickup and drop-off service. We’ll transport your vehicle for service, saving you time and letting you focus on what matters.</p>
+                    </div>
+                    
+                </div>
+                <img src="./Car_-_Detailing.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="spacer">
+
+    </div>
+    <div id="whyintro">
+        <h1>WHY CHOOSE <span>KM?</span></h1>
+    </div>
+    <div id="why" class=" w-full bg-zinc-900">
+        <div class="parent relative top-0 left-0 w-full h-[700vh]"> 
+            <div class="w-full sticky top-0 left-0 h-screen">
+                <canvas class="w-full h-screen" id="frame"></canvas>
+            </div>
+        </div>
+    </div>
+    <div id="space">
+
+    </div>
+    <div id="testimonialsintro">
+        <h1>Dont Trust <span>US?</span> Lets hear from our <span>Customers</span></h1>
+    </div>
+    <div id="testimonials">
+        <div class="tagembed-widget lazy-widget" style="width:100%;height:100%" data-widget-id="161545" view-url="https://widget.tagembed.com/161545"></div>
+    </div>
+    
+    <div  id="spinny">
+        <!-- <div class="images">
+            <div class="kmlogo"><img  src="./kaarz logo.png" alt=""></div>
+            
+            <i class="ri-close-line"></i>
+            <div class="spnlogo"> <img  src="./Screenshot 2024-08-25 at 1.29.26 AM.png" class="ml-5" alt="" ></div>
+           
+        </div>
+        <p class="mt-10" >KM Automotive is now a trusted service and repair partner for Spinny in the Hyderabad region. We provide top-quality care and maintenance for your Spinny car, ensuring it remains in excellent condition.</p> -->
+        <div class="logo-container1 ">
+            <img src="./kaarz logo.png"  alt="KM Automotive Logo" class="responsivelogo ">
+        </div>
+    </div>
+    <div id="rcb">
+        <div class="overlay"></div>
+        <h1>Get A Fair Quote Along With Free Doorstep Pick-up & Drop Facility</h1>
+        <button class="rcbtn" ><a href="">BOOK A SERVICE</a></button>
+    </div>
+    <div id="contact">
+        <div class="info">
+            <h1>KM Automotive</h1>
+            <p>KM Automotive is dedicated to delivering premium-quality care for your vehicle at an affordable price. We provide real-time updates throughout your service journey, ensuring comprehensive care with a fair and transparent pricing you can trust.</p>
+            <div class="icons">
+                <i class="ri-facebook-line mr-5"><a href=""></a></i>
+                <a href="https://www.instagram.com/kaarz_more?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="ri-instagram-line mr-5"></i></a>
+                <a href="https://youtube.com/@kmautomotive?si=Ydskx3Eo-os8cTrv"><i class="ri-youtube-line mr-5"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=+91 9576767776&text=Hello, I would like to book a service appointment with KM Automotives. Please let me know the next available slot." target="_blank">
+                    <i class="ri-whatsapp-line mr-5"></i>
+                  </a>
+                
+            </div>
+            <div class="location mt-12">
+                <a href="https://www.google.com/maps/place/KM+AUTOMOTIVE/@17.4569547,78.3844629,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb999f59f766e5:0xcd3fce4ee151802!8m2!3d17.4569547!4d78.3844629!16s%2Fg%2F11tnl096s_?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"><i class="ri-map-pin-line mr-2"></i></a>
+                <p class="ml-2">Plot no 94/B ,Sy no 11/34, Hitech City, Madhapur, Hyderabad, Telangana 500081</p>
+            </div>
+            <div class="mail mt-4">
+                <i class="ri-mail-line mr-2"></i>
+                <p class="ml-2" >kmautomotive7776@gmail.com</p>
+            </div>
+            <div class="phone mt-4">
+                <i class="ri-phone-line mr-2"></i>
+                <p class="ml-2">+91 9576767776 | +91 9912529185</p>
+            </div>
+        </div>
+        <div class="logo-container">
+            <img src="./kaarz logo.png" alt="KM Automotive Logo" class="responsive-logo ">
+        </div>
+    </div>
+   
+    <div id="footer">
+        <p>Copyright © 2024 KM Automotive. All rights reserved</p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
