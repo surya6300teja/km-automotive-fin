@@ -490,7 +490,7 @@ function initializeAnimations() {
     page2intro();
     services();
     whyintro();
-    why();
+    // why();
     testimonialintro();
     // contact();
     if (window.matchMedia("(min-width: 1024px)").matches) {
@@ -615,8 +615,6 @@ function intro_animation(){
     });
 
     var logoscale=window.matchMedia("(min-width: 1024px)").matches ? 3: 2;
-
-    // Hide body overflow initially
    
     document.body.style.overflow = "hidden";
     
