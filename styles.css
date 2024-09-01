@@ -889,6 +889,11 @@ form button:hover{
     height: 100%;
     
 }
+.introbtns{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
 
 
 @media only screen and (max-width: 600px){
@@ -1132,7 +1137,7 @@ form button:hover{
         transition: background-color 0.3s ease-in-out;
         font-size: 2vw;
         margin-top: 40px;
-        padding: 15px 35px;
+        padding: 10px 25px;
         background-color: transparent;
         border: 1px solid white;
         color: aliceblue;
