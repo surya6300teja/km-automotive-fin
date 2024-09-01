@@ -49,10 +49,10 @@ function showScrollNow() {
                     scale: 1,
                     duration: 0.5,
                     onComplete: function() {
-                        curser.removeChild(curserText); // Remove text after animation
+                        curser.removeChild(curserText); 
                     }
                 });
-            }, 2000); // Wait 2 seconds before returning to normal size
+            }, 2000); 
         }
     });
 }
@@ -494,7 +494,7 @@ function initializeAnimations() {
     testimonialintro();
     // contact();
     if (window.matchMedia("(min-width: 1024px)").matches) {
-        spinny();
+        // spinny();
         curser();
         page2();
     }else{
@@ -633,20 +633,19 @@ function intro_animation(){
         duration:1
     },"a");
 
-    // Initialize the loading bar
+    
     gsap.set(".bar", {
         transform:"scaleX(0)"
     });
 
-    // Simulate loading progress
+    
     gsap.to(".bar", {
         scaleX: 1,
-        duration: 3, // Simulated duration
+        duration: 3, 
         ease: "slow(0.7, 0.7, false)"
     });
 
-    window.addEventListener("load", function() {
-        // Once everything is loaded, continue with the rest of the animations
+    // window.addEventListener("load", function() {
         document.getElementById("page1").classList.remove("opacity-0");
         tl.from(".logo h1",{
             y:350,
@@ -715,7 +714,7 @@ function intro_animation(){
             tl.to(".logo h1", { x: logomove, duration: 0.5 },"line1");
             tl.to(".menu", { right: move, duration: 0.5 },"line1");
         }
-    });
+    // });
 }
 
 
@@ -779,35 +778,35 @@ function menumob(){
       });
 }
 
-function spinny(){
-    var tl5=gsap.timeline({
-        scrollTrigger: {
-            trigger: "#spinny",
-            start: "top 0%", 
-            end: "bottom bottom",
-            scrub: 1,
-            pin:true
+// function spinny(){
+//     var tl5=gsap.timeline({
+//         scrollTrigger: {
+//             trigger: "#spinny",
+//             start: "top 0%", 
+//             end: "bottom bottom",
+//             scrub: 1,
+//             pin:true
             
-        }
-    })
-    tl5.from(".images i",{
-        rotate:180,
-        scale:0,
-        duration:1
-    })
-    tl5.from(".kmlogo",{
-        x:-200,
-        opacity:0,
-        duration:1
-    },"sam")
-    tl5.from(".spnlogo",{
-        x:200,
-        opacity:0,
-        duration:1
-    },"sam")
-    tl5.from("#spinny p",{
-        opacity:0,
-        duration:1
-    })
+//         }
+//     })
+//     tl5.from(".images i",{
+//         rotate:180,
+//         scale:0,
+//         duration:1
+//     })
+//     tl5.from(".kmlogo",{
+//         x:-200,
+//         opacity:0,
+//         duration:1
+//     },"sam")
+//     tl5.from(".spnlogo",{
+//         x:200,
+//         opacity:0,
+//         duration:1
+//     },"sam")
+//     tl5.from("#spinny p",{
+//         opacity:0,
+//         duration:1
+//     })
 
-}
+// }
