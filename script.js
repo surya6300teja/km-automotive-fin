@@ -501,35 +501,35 @@ function initializeAnimations() {
         menumob();
         page2mob();
     }
-    lazyLoadWhySection();
+    // lazyLoadWhySection();
     
 }
 
-function lazyLoadWhySection() {
-    const whySection = document.querySelector('#whyintro'); // Replace with your actual section selector
+// function lazyLoadWhySection() {
+//     const whySection = document.querySelector('#page2intro'); // Replace with your actual section selector
 
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    why();
-                    observer.unobserve(whySection); // Stop observing once `why()` has been triggered
-                }
-            });
-        });
+//     if ('IntersectionObserver' in window) {
+//         const observer = new IntersectionObserver((entries, observer) => {
+//             entries.forEach(entry => {
+//                 if (entry.isIntersecting) {
+//                     why();
+//                     observer.unobserve(whySection); // Stop observing once `why()` has been triggered
+//                 }
+//             });
+//         });
 
-        observer.observe(whySection);
-    } else {
-        // Fallback if Intersection Observer is not supported
-        window.addEventListener('scroll', function onScroll() {
-            const rect = whySection.getBoundingClientRect();
-            if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-                why();
-                window.removeEventListener('scroll', onScroll); // Stop listening after `why()` is triggered
-            }
-        });
-    }
-}
+//         observer.observe(whySection);
+//     } else {
+//         // Fallback if Intersection Observer is not supported
+//         window.addEventListener('scroll', function onScroll() {
+//             const rect = whySection.getBoundingClientRect();
+//             if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+//                 why();
+//                 window.removeEventListener('scroll', onScroll); // Stop listening after `why()` is triggered
+//             }
+//         });
+//     }
+// }
 
 document.addEventListener('DOMContentLoaded', function() {
    initializeAnimations();
@@ -671,11 +671,15 @@ function intro_animation(){
 
     window.addEventListener("load", function() {
         document.getElementById("page1").classList.remove("opacity-0");
+        
         tl.from(".logo h1",{
             y:350,
             scale:logoscale,
             duration:2,
             delay:1,
+            onStart: function() {
+                why(); // Trigger why() right as the first animation starts
+            }
         });
 
         tl.from("nav i",{
