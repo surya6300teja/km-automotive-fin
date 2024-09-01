@@ -1006,6 +1006,7 @@ form button:hover{
     #page1{
         height: 100dvh;
         padding: 0px 0px;
+        overflow-y: auto;
        overflow-x: hidden;
     }
     nav{
@@ -1017,23 +1018,6 @@ form button:hover{
         align-items: center;
         position: relative;
     }
-    /* .menu {
-        position: absolute;
-        top: 0;
-        right: -100%; 
-        width: 50%;
-        height: 100dvh;
-        background-color: rgba(0, 0, 0, 0.756);
-        color: white;
-        padding: 20px;
-        z-index: 1000;
-        transition: right 0.5s ease;
-    }
-    .menu ul {
-        flex-direction: column;
-        height: 60%;
-    }
-     */
      .menu{
         padding: 0px 0px;
         width: 70%;
@@ -1106,7 +1090,7 @@ form button:hover{
     }
     
     .hero{
-        height: 100vh;
+        height: 80vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1156,9 +1140,6 @@ form button:hover{
         background-color: aliceblue;
     
     }
-    
-    
-    
     .banner{
         flex-basis: 100%;
         display: flex;
